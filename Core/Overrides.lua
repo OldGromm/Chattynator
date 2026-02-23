@@ -183,7 +183,7 @@ function addonTable.Core.ApplyOverrides()
       ChatFrame1EditBox:SetShown(addonTable.Config.Get(addonTable.Config.Options.KEEP_EDIT_BOX_VISIBLE))
     end
   end)
-  
+
   local function UpdateHeader(editBox)
     if editBox ~= ChatFrame1EditBox then
       return
