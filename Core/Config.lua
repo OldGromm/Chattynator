@@ -79,7 +79,7 @@ local settings = {
 
   EDIT_BOX_POSITION = {key = "edit_box_position", default = "bottom"},
   KEEP_EDIT_BOX_VISIBLE = {key = "keep_edit_box_visible", default = false},
-  
+
   SKINS = {key = "skins", default = {}},
   DISABLED_SKINS = {key = "disabled_skins", default = {}},
   CURRENT_SKIN = {key = "current_skin", default = "dark"},
@@ -115,6 +115,8 @@ local settings = {
   BUTTON_POSITION = {key = "button_position", default = "outside_left"},
   SHOW_BUTTONS = {key = "show_buttons", default = "unset"},
   SHOW_TABS = {key = "show_tabs_1", default = "always", refresh = {addonTable.Constants.RefreshReason.Tabs}},
+
+  WHISPER_SOUNDS = {key = "whisper_sounds", default = "first"},
 
   COPY_TIMESTAMPS = {key = "copy_timestamps", default = true},
   ENABLE_COMBAT_MESSAGES = {key = "enable_combat_messages", default = false},
