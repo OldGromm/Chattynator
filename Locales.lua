@@ -80,10 +80,8 @@ L["FLASH_TABS_ON"] = "Flash tabs on"
 L["STORE_MESSAGES"] = "Store messages"
 L["REMOVE_OLD_MESSAGES"] = "Remove old messages"
 L["NEVER"] = "Never"
-
-L["WHISPER_SOUNDS"] = "Whispers sounds"
-L["FIRST_MESSAGE"] = "First message"
 L["ALL_MESSAGES"] = "All messages"
+L["WHISPERS_ONLY"] = "Whispers only"
 
 L["MESSAGE_FONT_OUTLINE"] = "Message font outline"
 L["MESSAGE_SPACING"] = "Message spacing"
@@ -99,6 +97,10 @@ L["THICK"] = "Thick"
 L["ALWAYS"] = "Always"
 L["MOUSEOVER"] = "Mouseover"
 L["NEVER"] = "Never"
+
+L["WHISPER_SOUNDS"] = "Whispers sounds"
+L["FIRST_MESSAGE"] = "First message"
+L["ALL_MESSAGES"] = "All messages"
 
 L["NONE"] = "None"
 L["SHORTEN_STYLE_1"] = "Style 1: [1] [|cff00ff00Character|r]:"
