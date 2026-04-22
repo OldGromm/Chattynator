@@ -128,6 +128,9 @@ local settings = {
   CHAT_COLORS = {key = "chat_colors", default = {}, refresh = {addonTable.Constants.RefreshReason.MessageColor}},
 
   FORCE_TAB_OVERFLOW = {key = "force_tab_overflow", default = false, refresh = {addonTable.Constants.RefreshReason.Tabs}},
+
+  TABSIZE_PADDING = {key = "tabsize_padding", default = 30},
+  TABSIZE_SPACING = {key = "tabsize_spacing", default = 10}
 }
 
 addonTable.Config.RefreshType = {}
