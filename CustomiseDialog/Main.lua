@@ -320,6 +320,22 @@ local function SetupLayout(parent)
   locked:SetPoint("TOP", allFrames[#allFrames], "BOTTOM", 0, -30)
   table.insert(allFrames, locked)
 
+  local TabsizePadding
+  TabsizePadding = addonTable.CustomiseDialog.Components.GetSlider(container, addonTable.Locales.TABSIZE_PADDING, 5, 30, "%spx", function()
+    addonTable.Config.Set(addonTable.Config.Options.TABSIZE_PADDING, TabsizePadding:GetValue())
+  end)
+  TabsizePadding.option = addonTable.Config.Options.TABSIZE_PADDING
+  TabsizePadding:SetPoint("TOP", allFrames[#allFrames], "BOTTOM", 0, -30)
+  table.insert(allFrames, TabsizePadding)
+
+    local TabsizeSpacing
+  TabsizeSpacing = addonTable.CustomiseDialog.Components.GetSlider(container, addonTable.Locales.TABSIZE_SPACING, 1, 20, "%spx", function()
+    addonTable.Config.Set(addonTable.Config.Options.TABSIZE_SPACING, TabsizeSpacing:GetValue())
+  end)
+  TabsizeSpacing.option = addonTable.Config.Options.TABSIZE_SPACING
+  TabsizeSpacing:SetPoint("TOP", allFrames[#allFrames], "BOTTOM")
+  table.insert(allFrames, TabsizeSpacing)
+
   container:SetScript("OnShow", function()
     for _, f in ipairs(allFrames) do
       if f.SetValue then
