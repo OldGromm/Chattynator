@@ -320,21 +320,25 @@ local function SetupLayout(parent)
   locked:SetPoint("TOP", allFrames[#allFrames], "BOTTOM", 0, -30)
   table.insert(allFrames, locked)
 
-  local TabsizePadding
-  TabsizePadding = addonTable.CustomiseDialog.Components.GetSlider(container, addonTable.Locales.TABSIZE_PADDING, 5, 30, "%spx", function()
-    addonTable.Config.Set(addonTable.Config.Options.TABSIZE_PADDING, TabsizePadding:GetValue())
+  local tabsettingspadding
+  tabsettingspadding = addonTable.CustomiseDialog.Components.GetSlider(container, addonTable.Locales.TABSIZE_PADDING, 5, 30, "%s", function()
+    addonTable.Config.Set(addonTable.Config.Options.TABSIZE_PADDING, tabsettingspadding:GetValue())
+	addonTable.Constants.TabPadding = tabsettingspadding:GetValue()
+	addonTable.CallbackRegistry:TriggerEvent("RefreshStateChange", {[addonTable.Constants.RefreshReason.Tabs] = true})
   end)
-  TabsizePadding.option = addonTable.Config.Options.TABSIZE_PADDING
-  TabsizePadding:SetPoint("TOP", allFrames[#allFrames], "BOTTOM", 0, -30)
-  table.insert(allFrames, TabsizePadding)
+  tabsettingspadding.option = addonTable.Config.Options.TABSIZE_PADDING
+  tabsettingspadding:SetPoint("TOP", allFrames[#allFrames], "BOTTOM", 0, -30)
+  table.insert(allFrames, tabsettingspadding)
 
-    local TabsizeSpacing
-  TabsizeSpacing = addonTable.CustomiseDialog.Components.GetSlider(container, addonTable.Locales.TABSIZE_SPACING, 1, 20, "%spx", function()
-    addonTable.Config.Set(addonTable.Config.Options.TABSIZE_SPACING, TabsizeSpacing:GetValue())
+  local tabsettingsspacing
+  tabsettingsspacing = addonTable.CustomiseDialog.Components.GetSlider(container, addonTable.Locales.TABSIZE_SPACING, 1, 20, "%s", function()
+    addonTable.Config.Set(addonTable.Config.Options.TABSIZE_SPACING, tabsettingsspacing:GetValue())
+    addonTable.Constants.TabSpacing = tabsettingsspacing:GetValue()
+	addonTable.CallbackRegistry:TriggerEvent("RefreshStateChange", {[addonTable.Constants.RefreshReason.Tabs] = true})
   end)
-  TabsizeSpacing.option = addonTable.Config.Options.TABSIZE_SPACING
-  TabsizeSpacing:SetPoint("TOP", allFrames[#allFrames], "BOTTOM")
-  table.insert(allFrames, TabsizeSpacing)
+  tabsettingsspacing.option = addonTable.Config.Options.TABSIZE_SPACING
+  tabsettingsspacing:SetPoint("TOP", allFrames[#allFrames], "BOTTOM")
+  table.insert(allFrames, tabsettingsspacing)
 
   container:SetScript("OnShow", function()
     for _, f in ipairs(allFrames) do
