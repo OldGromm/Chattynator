@@ -182,6 +182,9 @@ L["SLASH_RESET_HELP"] = "Reset all Chattynator settings, then reload."
 L["SLASH_HELP"] = "Open the Chattynator settings."
 L["SLASH_UNKNOWN_COMMAND"] = "Unknown command '%s'"
 
+L["TABSIZE_PADDING"] = "Tab padding"
+L["TABSIZE_SPACING"] = "Tab spacing"
+
 local L = Locales.frFR
 --@localization(locale="frFR", format="lua_additive_table")@
 
